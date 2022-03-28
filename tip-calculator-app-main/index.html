@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- displays site properly based on user's device -->
+
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+    <title>Frontend Mentor | Tip calculator app</title>
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+</head>
+
+<body>
+    <main>
+        <div class="heading"><span>SPLI</span><span>TTER</span></div>
+        <div class="box container">
+            <div class="area interaction">
+                <div class="control">
+                    <div class="labels">
+                        <label for="">Bill</label>
+                        <!-- <span>Can't be zero</span> -->
+                    </div>
+                    <div class="input-container">
+                        <i class="fa-solid fa-dollar-sign"></i>
+                        <input type="text" name="bill" id="bill" class="bill input">
+                    </div>
+                </div>
+                <div class="control select">
+                    <div class="labels">
+                        <label for="">Select Tip %</label>
+                    </div>
+                    <div class="buttons">
+                        <button type="button" value="5">5%</button>
+                        <button type="button" value="10">10%</button>
+                        <button type="button" value="15">15%</button>
+                        <button type="button" value="25">25%</button>
+                        <button type="button" value="50">50%</button>
+                        <input type="text" name="" id="discount" placeholder="Custom" class="discount input">
+                    </div>
+                </div>
+                <div class="control">
+                    <div class="labels">
+                        <label for="">Number of People</label>
+                        <!-- <span>Can't be zero</span> -->
+                    </div>
+                    <div class="input-container">
+                        <i class="fa-solid fa-user"></i>
+                        <input type="text" name="people" id="people" class="people input">
+                    </div>
+                </div>
+            </div>
+            <div class="area result">
+                <div class="grow">
+                    <div class="amount">
+                        <div class="title">
+                            <span><strong>Tip amount</strong></span>
+                            <span class="txt-light">/ person</span>
+                        </div>
+                        <div class="money" id="amount">
+                            <span>$0.00</span>
+                        </div>
+                    </div>
+                    <div class="total">
+                        <div class="title">
+                            <span><strong>Total</strong></span>
+                            <span class="txt-light">/ person</span>
+                        </div>
+                        <div class="money" id="total">
+                            <span>$0.00</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="reset">
+                    <button type="button" class="btn" id="reset">Reset</button>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="main.js"></script>
+</body>
+
+</html>

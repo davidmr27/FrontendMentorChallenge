@@ -1,0 +1,219 @@
+body {
+    padding: 0;
+    margin:0;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    background-color: #C5E4E7;
+}
+
+main {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+/* BOX container*/
+.box{
+    width: 920px;
+    background-color: white;
+    padding: 20px;
+    box-sizing: border-box;
+    border-radius: 25px;
+    position: relative;
+    box-shadow: 0px 10px 20px -10px rgba(0, 0, 0, 0.5);
+    display: flex;
+    height: 480px;
+    justify-content: space-between;
+}
+.box .area{
+    height: 100%;
+    width: 100%;
+}
+.area.result{
+    background-color: #00474B;
+    height: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+    border-radius: 15px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+}
+.grow{
+    flex: 1;
+}
+/* RESULT AREA */
+.grow > div{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 35px;
+}
+.money{
+    font-size: 37px;
+    font-weight: bold;
+    color: #26c2ae;
+}
+.grow > div .title{
+    font-size: 16;
+    width: 95px ;
+    font-family: Helvetica, sans-serif;
+}
+.title span{
+    display: block;
+}
+.title  span:first-child{
+    margin-bottom: 5px;
+}
+.title .txt-light{
+    font-size: 14px;
+    color: #7F9D9F;
+}
+.reset .btn{
+    border: none;
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+    background-color: #26c2ae;
+    color: #00474B;
+    cursor: pointer;
+    transition: all ease-in-out .5s;
+}
+.reset .btn:hover{
+    background-color: #9FE8DF;
+}
+/* Area iteractiva */
+.area.interaction{
+    /* background-color: aqua; */
+    box-sizing: border-box;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    padding-right: 35px;
+    justify-content: space-between;
+}
+.interaction .control{
+    margin-bottom: 15px;
+}
+.interaction .control > *{
+    display: block;
+}
+.control label{
+    font-size: 16px;
+    color: #5E7A7D;
+    font-weight: 700;
+    word-spacing: 4px;
+    margin-bottom: 5px;
+}
+.control input[type=text].input{
+    width: 100%;
+    background-color: #F3F9FA;
+    border: none;
+    outline: none;
+    height: 48px;
+    border-radius: 5px;
+    color: #00474B;
+    font-weight: bold;
+    padding: 10px;
+    padding-left: 45px;
+    box-sizing: border-box;
+    font-size: 18px;
+    text-align: right;
+}
+/* select option */
+.select .buttons{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1em;
+}
+.buttons button{
+    border: none;
+    background-color: #00474B;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    width: 117px;
+    border-radius: 5px;
+    height: 48px;
+    cursor: pointer;
+}
+.buttons button:hover{
+    background-color: #9FE8DF;
+    color: #00474B;
+}
+.buttons button.active{
+    background-color: #26C2AE;
+    color: #00474B;
+}
+.buttons input[type=text]{
+    border: none;
+    width: 117px;
+    border-radius: 5px;
+    padding: 10px 15px;
+    box-sizing: border-box;
+    text-align: right;
+    font-size: 18px;
+    font-weight: bold;
+    color: #547878;
+    background-color: #F3F9FA;
+}
+.control input[type=text]:focus{
+    outline: 3px solid #26C2AE;
+}
+.buttons input[type=text]:focus{
+    outline: 3px solid #26c2ae;
+    color: #00474B;
+}
+.input-container i{
+    padding-top: 15px;
+    padding-left: 15px;
+    position: absolute;
+    color: #9EBBBD;
+}
+.heading{
+    margin-bottom: 20px;
+    font-size: 30px;
+    font-weight: bold;
+    color: #3D6666;
+    letter-spacing: 1.5ch;
+}
+.heading span{
+    display: block;
+    margin-bottom: 10px;
+}
+.labels{
+    margin-bottom:10px
+}
+.error > .input-container input[type=text]{
+outline: 3px solid #E17052;
+}
+.error > .labels span{
+    color: #E17052;
+}
+.interaction .control .labels{
+    display: flex;
+    justify-content: space-between;
+    font-weight: 700;
+    /* letter-spacing: 2px; */
+}
+/* RESPONSIVE */
+@media screen and (max-width:1000px) {
+    .box{
+        flex-direction: column;
+        height:750px;
+        width:400px;
+    }
+    .control{
+        margin-bottom:10px;
+    }
+    .select .buttons {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .buttons button , .buttons input[type=text]{
+        width: 100%;
+    }
+}
