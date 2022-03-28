@@ -54,7 +54,7 @@ function custom_discount() {
         percent = discount.value;
         bill = tagBill.value;
         people = tagPeople.value;
-        console.log(percent);
+        // console.log(percent);
         check_is_input_zero();
         calculate_total_amount();
     } else if(discount.value = "") {
@@ -87,7 +87,7 @@ function check_is_input_zero() {
             }
         } else {
             if (father.classList.contains("error")) {
-                console.log("Borrando la clase")
+                // console.log("Borrando la clase")
                 brother.removeChild(brother.lastElementChild)
                 father.classList.remove("error");
             }
