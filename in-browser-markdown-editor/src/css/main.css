@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&family=Roboto+Slab:wght@300;400;700;800;900&family=Roboto:wght@300;400&display=swap');
+
+:root {
+  --bg-orange: #e46643;
+  --bg-orange-hover: #f39765;
+  --bg-black: #151619;
+  --cl-black-lv1: #1d1f22;
+  --cl-black-lv2: #2b2d31;
+  --cl-black-lv3: #35393f;
+  --bg-darkgray: #5a6069;
+  --cl-darkgray-lv1: #7c8187;
+  --cl-darkgray-lv2: #c1c4cb;
+  --cl-darkgray-lv3: #e4e4e4;
+  --cl-gray: #e4e4e4;
+  --cl-white: #fff;
+}
+body {
+  background-color: #fff;
+  padding: 0;
+  margin: 0;
+}
+
+.preview {
+  /* font-family: 'Roboto', sans-serif; */
+  font-family: "Roboto Slab", serif;
+  font-size: 24px;
+}
+.preview .h1 {
+  font-size: 32px;
+  font-weight: bold;
+}
+.preview .h2 {
+  font-size: 28px;
+  font-weight: lighter;
+}
+.preview .h3 {
+  font-weight: bold;
+}
+.preview .h4 {
+  font-size: 20px;
+  font-weight: bold;
+}
+.preview .h5 {
+  font-size: 16px;
+  font-weight: bold;
+}
+.preview .h6 {
+  color: var(--bg-orange);
+  font-size: 14px;
+  font-weight: bold;
+}
+
+#layout{
+    display: grid;
+    
+}
