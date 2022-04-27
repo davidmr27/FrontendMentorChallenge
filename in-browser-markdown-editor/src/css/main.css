@@ -61,6 +61,7 @@ button.button {
   background-color: var(--bg-orange);
   color: white;
   padding: 0.8em 1em;
+  cursor: pointer;
 }
 /*|| LAYOUT */
 #layout {
@@ -82,6 +83,9 @@ button.button {
   grid-area: header;
   background-color: var(--cl-black-lv2);
   color: white;
+  display: flex;
+  height: 72px;
+  
 }
 .main {
   grid-area: main;
@@ -91,4 +95,41 @@ button.button {
 .header nav {
   display: flex;
   justify-content: space-between;
+  flex: 1;
+  font-family: "Roboto Slab", sans-serif;
+}
+nav > div{
+  display: flex;
+  align-items: center;
+  align-content: center;
+}
+nav div.edit-area{
+  box-sizing: border-box;
+  margin-right: 30px;
+}
+div.edit-area .delete--file{
+  width: 50px;
+  box-sizing: border-box;
+  padding: 1em;
+  color: var(--cl-darkgray-lv1);
+  font-size: 18px;
+}
+.btn-save-changes button > *{
+  margin: 0 5px;
+}
+/*|| EDIT DOC */
+nav div.edit-doc .document--name{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.document--name div > span{
+  display:block;
+  margin-bottom: 3px;
+  font-family: "Roboto Slab", sans-serif;
+  font-size: 14px;
+  font-weight: lighter;
+}
+.document--name div span:first-child{
+  color: var(--cl-darkgray-lv2);
 }
