@@ -85,7 +85,6 @@ button.button {
   color: white;
   display: flex;
   height: 72px;
-  
 }
 .main {
   grid-area: main;
@@ -98,38 +97,77 @@ button.button {
   flex: 1;
   font-family: "Roboto Slab", sans-serif;
 }
-nav > div{
+nav > div {
   display: flex;
   align-items: center;
   align-content: center;
 }
-nav div.edit-area{
+nav div.edit-area {
   box-sizing: border-box;
   margin-right: 30px;
 }
-div.edit-area .delete--file{
+div.edit-area .delete--file {
   width: 50px;
   box-sizing: border-box;
   padding: 1em;
   color: var(--cl-darkgray-lv1);
   font-size: 18px;
 }
-.btn-save-changes button > *{
+.btn-save-changes button > * {
   margin: 0 5px;
 }
 /*|| EDIT DOC */
-nav div.edit-doc .document--name{
+nav div.edit-doc {
+  gap: 10px;
+}
+nav div.edit-doc .document--name {
   display: flex;
   align-items: center;
   gap: 10px;
+  box-sizing: border-box;
+  padding-left: 20px;
 }
-.document--name div > span{
-  display:block;
+.document--name div > span {
+  display: block;
   margin-bottom: 3px;
   font-family: "Roboto Slab", sans-serif;
   font-size: 14px;
   font-weight: lighter;
 }
-.document--name div span:first-child{
+
+.document--name div span:first-child {
   color: var(--cl-darkgray-lv2);
+  margin-bottom: 7px;
+}
+.document--name span:first-child {
+  font-size: 16px;
+}
+
+.document--name div span::first-letter {
+  text-transform: uppercase;
+}
+
+/* BRAND */
+.edit-doc .title {
+  box-sizing: border-box;
+  text-transform: uppercase;
+  letter-spacing: 1ch;
+  font-weight: bold;
+  padding: 0.5em 0.5em 0.5em;
+  padding-right: 20px;
+  font-family: "Roboto";
+  border-right: 2px solid var(--cl-darkgray-lv1);
+}
+/* HAMBURGER MENU */
+.edit-doc .menu--hamburger {
+  height: 100%;
+  width: 72px;
+  background: var(--cl-black-lv3);
+  font-size: 35px;
+  text-align: center;
+  box-sizing: border-box;
+  padding: 15px;
+  color: white;
+  cursor: pointer;
+  text-decoration: none;
 }
