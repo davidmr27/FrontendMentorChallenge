@@ -62,6 +62,7 @@ button.button {
   color: white;
   padding: 0.8em 1em;
   cursor: pointer;
+  font-weight: lighter;
 }
 /*|| LAYOUT */
 #layout {
@@ -170,4 +171,49 @@ nav div.edit-doc .document--name {
   color: white;
   cursor: pointer;
   text-decoration: none;
+}
+
+/* ||SIDEBAR */
+aside.sidenav {
+  box-sizing: border-box;
+  padding: 1em 1.2em;
+  display: flex;
+  flex-direction: column;
+  font-family: "Roboto Slab";
+  font-weight: lighter;
+  /* justify-content: space-between; */
+}
+.sidenav .sidenav--title {
+  text-transform: uppercase;
+  color: var(--cl-darkgray-lv1);
+  font-weight: lighter;
+  text-align: center;
+}
+.sidenav .sidenav--body {
+  flex-grow: 2;
+}
+.button.button-new--doc {
+  width: 100%;
+}
+button.button.button-new--doc i {
+  font-size: 12px;
+}
+.sidenav--body .list--documents .documents--file {
+  display: flex;
+  align-items: center;
+  align-content: center;
+  gap: 10px;
+  margin-bottom: 1.5em;
+  font-family: "Roboto";
+}
+
+.sidenav--body .list--documents .documents--file:first-child {
+  padding-top: 30px;
+}
+.documents--file .document-content div:first-child {
+  color: var(--cl-darkgray-lv1);
+  font-size: 14px;
+}
+.documents--file .document-content div:last-child {
+  font-size: 18px;
 }
