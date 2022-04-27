@@ -14,14 +14,13 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
     />
-    <link rel="stylesheet" href="./css/normalize.css">
-    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/normalize.css" />
+    <link rel="stylesheet" href="./css/main.css" />
     <title>Frontend Mentor | In-browser markdown editor</title>
   </head>
   <body>
     <!-- Sidebar start -->
     <div id="layout">
-
       <aside class="sidenav">
         <div class="sidenav-title">
           <p>My Documents</p>
@@ -70,22 +69,24 @@
         </div>
       </aside>
       <!-- Sidebar end -->
-  
+
       <!-- Header start -->
       <header class="header">
         <nav class="navbar navbar-light fixed-top">
-          <div>
+          <div class="edit-doc">
             <div class="menu--hamburger">
               <i class="fa-solid fa-bars"></i>
             </div>
-            <div class="title"></div>
+            <div class="title">MARKDOWN</div>
             <div class="document--name">
               <span><i class="fa-solid fa-file"></i></span>
-              <span>Document Name</span>
-              <span>Welcomen.md</span>
+              <div>
+                <span>Document Name</span>
+                <span>Welcomen.md</span>
+              </div>
             </div>
           </div>
-          <div>
+          <div class="edit-area">
             <div class="delete--file">
               <i class="fa-solid fa-trash-can"></i>
             </div>
@@ -98,9 +99,9 @@
           </div>
         </nav>
       </header>
-  
+
       <!-- Header end -->
-  
+
       <!-- Main start -->
       <main class="main">
         <section class="section--editor">
