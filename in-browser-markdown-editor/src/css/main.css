@@ -63,6 +63,11 @@ button.button {
   cursor: pointer;
   font-weight: lighter;
 }
+/* || HOVER BUTTON */
+a.button:hover,
+button.button:hover{
+  background-color: var(--bg-orange-hover);
+}
 /*|| LAYOUT */
 #layout {
   display: grid;
@@ -330,6 +335,7 @@ header h5{
 }
 .preview .hide-editor{
   margin-right: 15px;
+  cursor: pointer;
 }
 .document textarea{
   box-sizing: border-box;
