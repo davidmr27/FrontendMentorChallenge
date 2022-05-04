@@ -27,10 +27,18 @@ menu.addEventListener('click', (e) => {
 })
 
 // hide and show editor and preview
+let editor = document.getElementById('editor');
+let preview = document.getElementById('preview');
+let sectionPreview = document.getElementById('preview--editor');
+
 let btnPreview = document.getElementById('btn-preview');
 btnPreview.addEventListener('click', (e) => {
-    let editor = document.getElementById('editor');
-    let preview = document.getElementById('preview');
+    if(editor.classList.contains('editor-close')) {
+        editor.classList.remove('editor-open')
+        sectionPreview.classList.toggle('preview--show');
+        editor.style.display = 'block';
+        return;
+    }
 
     if (btnPreview.classList.contains('preview-open')) {
         editor.style.width = '0';
@@ -43,6 +51,16 @@ btnPreview.addEventListener('click', (e) => {
     }
     btnPreview.classList.toggle('preview-open');
     preview.classList.toggle('content-center');
+});
+let btnEditor = document.getElementById('btn-editor');
+btnEditor.addEventListener('click', (e) =>{
+    if(btnEditor.classList.contains('editor-open')){
+        editor.style.display = 'none';
+        editor.classList.add('editor-close');
+        sectionPreview.classList.toggle('preview--show');
+        btnPreview.removeChild(btnPreview.firstChild);
+        btnPreview.innerHTML = icons.eyeSlash;
+    }
 });
 
 // Show modal delete file

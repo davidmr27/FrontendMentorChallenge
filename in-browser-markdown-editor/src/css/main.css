@@ -337,14 +337,21 @@ main.main {
   width: 100%;
   height: 50px;
 }
-.main section header.preview {
-  padding-right: 25px;
+.main section header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 100%;
-  font-size: 1.2em;
   color: var(--cl-darkgray-lv1);
+  font-size: 1.2em;
+  width: 100%;
+}
+.main section header.preview {
+  padding-right: 25px;
+  color: var(--cl-darkgray-lv1);
+}
+.editor-header > div.hide-editor {
+  margin-right: 25px;
+  display: none;
 }
 header h5 {
   margin: 0;
@@ -506,7 +513,7 @@ pre.pre {
   transition: all 0.6 ease-in-out;
 }
 /* ||MODAL */
-.modal{
+.modal {
   display: none;
   position: fixed;
   z-index: 1;
@@ -514,39 +521,39 @@ pre.pre {
   top: 0;
   width: 100%;
   height: 100%;
-  overflow:auto;
-  background-color: rgb(0,0,0);
+  overflow: auto;
+  background-color: rgb(0, 0, 0);
   background-color: rgba(0, 0, 0, 0.4);
   animation-name: fadeIn;
   animation-duration: 0.4s;
 }
-.modal .modal-content{
+.modal .modal-content {
   display: flex;
   justify-content: center;
   align-items: center;
   align-content: center;
   height: 100%;
 }
-.modal-content > .modal-body{
+.modal-content > .modal-body {
   display: flex;
-  justify-content:center;
-  align-items:center;
+  justify-content: center;
+  align-items: center;
   align-content: center;
-  background-color:white; 
+  background-color: white;
   width: 350px;
   flex-direction: column;
   border-radius: 5px;
   padding: 25px 20px;
   box-sizing: border-box;
 }
-.modal-body .modal-title{
+.modal-body .modal-title {
   color: var(--cl-black-lv1);
   margin: 0;
   margin-bottom: 15px;
-  text-align:left;
+  text-align: left;
   width: 100%;
 }
-.modal-body .paragraph{
+.modal-body .paragraph {
   color: var(--cl-darkgray-lv1);
   margin: 0;
   margin-bottom: 15px;
@@ -554,15 +561,47 @@ pre.pre {
   line-height: 1.5;
   text-align: left;
 }
-.modal-body .button{
+.modal-body .button {
   width: 100%;
 }
 /* || ANIMATIONS */
 
 /* ||RESPONSIVE */
-@media screen and (max-width: 850px) {
+#preview--editor.preview--hidden {
+  display: block;
+}
+@media screen and (max-width: 900px) {
   .document.doc--preview.content-center {
     padding-left: 1.5em;
     padding-right: 1.5em;
+  }
+  .title {
+    display: none;
+  }
+}
+@media screen and (max-width: 450px) {
+  .document--name div span {
+    display: none;
+  }
+  .btn-save-changes button span {
+    display: none;
+  }
+
+  .document--name div div input {
+    font-size: 13px;
+    width: 80%;
+  }
+  .editor-header div.hide-editor {
+    display: block;
+    cursor: pointer;
+  }
+  #preview--editor {
+    display: none;
+  }
+  #preview--editor.preview--hidden {
+    display: none;
+  }
+  #preview--editor.preview--show {
+    display: block;
   }
 }
