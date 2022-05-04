@@ -21,7 +21,7 @@
   <body>
     <!-- Sidebar start -->
     <div id="layout">
-      <aside class="sidenav">
+      <aside class="sidenav sidenav-close">
         <div class="sidenav--title">
           <p>My Documents</p>
         </div>
@@ -83,7 +83,7 @@
       <header class="header">
         <nav class="navbar navbar-light fixed-top">
           <div class="edit-doc">
-            <a href="#" class="menu--hamburger">
+            <a href="#" class="menu--hamburger close" id="menu">
               <i class="fa-solid fa-bars"></i>
             </a>
             <div class="title">MARKDOWN</div>
@@ -115,7 +115,7 @@
 
       <!-- Main start -->
       <main class="main">
-        <section class="section--editor">
+        <section class="section--editor" id="editor">
           <header class="header--title">
             <h5 class="editor--title">Markdown</h5>
           </header>
@@ -126,7 +126,7 @@
         <section class="section--editor">
           <header class="header--title preview">
             <h5 class="editor--title">Preview</h5>
-            <div class="hide-editor">
+            <div class="hide-editor preview-open" id="btn-preview">
               <i class="fa-solid fa-eye"></i>
             </div>
           </header>
@@ -200,5 +200,6 @@
       </main>
     </div>
     <!-- Main end -->
+    <script src="js/main.js"></script>
   </body>
 </html>
