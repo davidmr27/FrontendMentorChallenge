@@ -79,11 +79,19 @@ button.button:hover {
     "sidenav main";
   grid-template-columns: 240px 1fr;
   grid-template-rows: 72px 1fr;
+  overflow-x: hidden;
 }
 .sidenav {
   grid-area: sidenav;
   background-color: var(--cl-black-lv1);
   color: white;
+}
+#layout.sidenav-close {
+  grid-template-columns: 100%;
+  grid-template-rows: 72px 1fr;
+  grid-template-areas: "header" "main";
+  height: 100vh;
+  overflow-x: hidden;
 }
 .header {
   grid-area: header;
@@ -371,8 +379,12 @@ header h5 {
 /* ||PREVIEW|| */
 .document.doc--preview {
   overflow-y: auto;
-  height: 95%;
+  height: 90%;
   padding: 1.2em 1.5em 1em;
+}
+.document.doc--preview.content-center {
+  padding-left: 20%;
+  padding-right: 20%;
 }
 /* ||SCROLLBAR */
 /* width */
@@ -489,26 +501,16 @@ pre.pre {
   transition: all 0.6 ease-in-out;
 }
 .sidenav.sidenav-close {
-  /* transform: translateX(-240px); */
-  /* width: 0; */
+  transform: translateX(-240px);
+  position: fixed;
   transition: all 0.6 ease-in-out;
 }
 /* || ANIMATIONS */
 
 /* ||RESPONSIVE */
-@media screen and (max-width: 800px) {
-  #layout {
-    display: grid;
-    position: relative;
-    grid-template-columns: 100%;
-    grid-template-rows: 72px 1fr;
-    grid-template-areas: "header" "main";
-    height: 100vh;
-    overflow-x: hidden;
-  }
-  .sidenav {
-    position: fixed;
-    transform: translateX(-240px);
-    transition: all 0.6 ease-in-out;
+@media screen and (max-width: 850px) {
+  .document.doc--preview.content-center {
+    padding-left: 1.5em;
+    padding-right: 1.5em;
   }
 }
