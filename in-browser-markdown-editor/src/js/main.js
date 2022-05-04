@@ -44,3 +44,17 @@ btnPreview.addEventListener('click', (e) => {
     btnPreview.classList.toggle('preview-open');
     preview.classList.toggle('content-center');
 });
+
+// Show modal delete file
+let modal = document.getElementById('modal-delete-file');
+let btnDelete = document.getElementById('delete-file');
+
+btnDelete.addEventListener('click', (e) => {
+    modal.style.display = 'block';
+});
+window.onclick = (e) => {
+    // console.log(e.target);
+    if(e.target.classList.contains('modal-content')) {
+        modal.style.display = 'none';
+    }
+}

@@ -20,8 +20,8 @@
   </head>
   <body>
     <!-- Sidebar start -->
-    <div id="layout">
-      <aside class="sidenav sidenav-close">
+    <div id="layout" class="sidenav-close">
+      <aside class="sidenav sidenav-close" id="sidenav">
         <div class="sidenav--title">
           <p>My Documents</p>
         </div>
@@ -98,7 +98,7 @@
             </div>
           </div>
           <div class="edit-area">
-            <div class="delete--file">
+            <div class="delete--file" id="delete-file">
               <i class="fa-solid fa-trash-can"></i>
             </div>
             <div class="btn-save-changes">
@@ -106,6 +106,15 @@
                 <i class="fa-solid fa-floppy-disk"></i>
                 <span> Save Changes </span>
               </button>
+            </div>
+            <div class="modal modal-delete-file" id="modal-delete-file">
+              <div class="modal-content">
+                <div class="modal-body">
+                  <h2 class="modal-title">Delete this document?</h2>
+                  <p class="paragraph">Are you sure you want to delete the ‘welcome.md’ document and its contents?<br>This action cannot be reversed.</p>
+                  <button class="button">Confirm & Delete</button> 
+                </div>
+              </div>
             </div>
           </div>
         </nav>
@@ -130,7 +139,7 @@
               <i class="fa-solid fa-eye"></i>
             </div>
           </header>
-          <div class="document doc--preview">
+          <div class="document doc--preview" id="preview">
             <h1 class="pre h1">Welcome to Markdown</h1>
             <br />
             <p class="pre paragraph">
