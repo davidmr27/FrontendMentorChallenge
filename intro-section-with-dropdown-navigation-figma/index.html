@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Intro section with dropdown navigation</title>
+  <link rel="stylesheet" href="./css/styles.css">
+</head>
+<body>
+  <header>
+    <div class="brand">
+      <a href="#">
+        <img src="./images/logo.svg" alt="Snap logo">
+      </a>
+    </div>
+    <div class="menu">
+      <nav>
+        <ul>
+          <li class="option submenu">
+            <span>Features</span>
+            <ul class="submenu features">
+              <li>
+                <div>
+                  <img src="./images/icon-todo.svg" alt="Todo icon" class="icon">
+                  <span>Todo List</span>
+                </div>
+              </li>
+              <li>
+                <div>
+                  <img src="./images/icon-calendar.svg" alt="Calendar icon" class="icon">
+                  <span>Calendar</span>
+              </li>
+              <li>
+                <div>
+                  <img src="./images/icon-reminders.svg" alt="Reminders icon" class="icon">
+                  <span>Chat</span>
+              </li>
+              <li>
+                <div>
+                  <img src="./images/icon-planning.svg" alt="Planning icon" class="icon">
+                  <span>Planning</span>
+              </li>
+            </ul>
+          </li>
+          <li class="option submenu">
+            <span>Company</span>
+            <ul class="submenu company">
+              <li>
+                <span>History</span>
+              </li>
+              <li>
+                <span>Our Team</span>
+              </li>
+              <li>
+                <span>Blog</span>
+              </li>
+            </ul>
+          </li>
+          <li class="option">
+            <span>
+              Careers
+            </span>
+          </li>
+          <li class="option">
+            <span>
+              About
+            </span>
+          </li>
+        </ul>
+      </nav>
+    </div>
+    <div class="user">
+      <div class="btn login">
+        <a href="#">Login</a>
+      </div>
+      <div class="btn register">
+        <a href="#">Register</a>
+      </div>
+    </div>
+  </header>
+  <main>
+    <div class="container">
+      <section class="review">
+        <div class="hero-title">
+          <h1>Make <br>remote work</h1>
+        </div>
+        <div class="description">
+          <p>
+            Get your team in sync, no matter your location. Streamline processes, 
+            create team rituals, and watch productivity soar.
+          </p>
+        </div>
+        <div class="btn more">
+          <a href="#">Learn more</a>
+        </div>
+        <div class="partner-list">
+          <div class="partner-item">
+            <img src="./images/client-databiz.svg" alt="Databiz">
+          </div>
+          <div class="partner-item">
+            <img src="./images/client-audiophile.svg" alt="Audiophile">
+          </div>
+          <div class="partner-item">
+            <img src="./images/client-meet.svg" alt="Meet"> 
+          </div>
+          <div class="partner-item">
+            <img src="./images/client-maker.svg" alt="Maker">
+          </div>
+        </div>
+      </section>
+      <section>
+          <div class="hero-image">
+            <img src="./images/image-hero-desktop.png" alt="" width="100%">
+          </div>
+      </section>
+    </div>
+  </main>
+  <script>
+    let optionSub = document.querySelectorAll('.option.submenu');
+    Array.from(optionSub).forEach(function(option) {
+      option.addEventListener('click', function(e) {
+        e.stopPropagation();
+        let submenu = option.querySelector('.submenu');
+        submenu.classList.toggle('active');
+      });
+    });
+  </script>
+</body>
+</html>
