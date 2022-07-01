@@ -20,7 +20,10 @@
       <nav>
         <ul>
           <li class="option submenu">
-            <span>Features</span>
+            <div class="text">
+              <span>Features</span>
+              <img src="./images/icon-arrow-down.svg" alt="Arrow dow">
+            </div>
             <ul class="submenu features">
               <li>
                 <div>
@@ -46,7 +49,10 @@
             </ul>
           </li>
           <li class="option submenu">
-            <span>Company</span>
+            <div class="text">
+              <span>Company</span>
+              <img src="./images/icon-arrow-down.svg" alt="Arrow dow">
+            </div>
             <ul class="submenu company">
               <li>
                 <span>History</span>
@@ -81,49 +87,54 @@
       </div>
     </div>
   </header>
-  <main>
+  
     <div class="container">
-      <section class="review">
-        <div class="hero-title">
-          <h1>Make <br>remote work</h1>
-        </div>
-        <div class="description">
-          <p>
-            Get your team in sync, no matter your location. Streamline processes, 
-            create team rituals, and watch productivity soar.
-          </p>
-        </div>
-        <div class="btn more">
-          <a href="#">Learn more</a>
-        </div>
-        <div class="partner-list">
-          <div class="partner-item">
-            <img src="./images/client-databiz.svg" alt="Databiz">
+      <section class="info">
+        <div class="info-container">
+          <div class="hero-title">
+            <h1>Make <br>remote work</h1>
           </div>
-          <div class="partner-item">
-            <img src="./images/client-audiophile.svg" alt="Audiophile">
+          <div class="description">
+            <p>
+              Get your team in sync, no matter your location. Streamline processes, 
+              create team rituals, and watch productivity soar.
+            </p>
           </div>
-          <div class="partner-item">
-            <img src="./images/client-meet.svg" alt="Meet"> 
+          <div class="btn more">
+            <a href="#">Learn more</a>
           </div>
-          <div class="partner-item">
-            <img src="./images/client-maker.svg" alt="Maker">
+          <div class="partner-list">
+            <div class="partner-item">
+              <img src="./images/client-databiz.svg" alt="Databiz">
+            </div>
+            <div class="partner-item">
+              <img src="./images/client-audiophile.svg" alt="Audiophile">
+            </div>
+            <div class="partner-item">
+              <img src="./images/client-meet.svg" alt="Meet"> 
+            </div>
+            <div class="partner-item">
+              <img src="./images/client-maker.svg" alt="Maker">
+            </div>
           </div>
         </div>
       </section>
-      <section>
-          <div class="hero-image">
-            <img src="./images/image-hero-desktop.png" alt="" width="100%">
-          </div>
+      <section class="hero-image">
+            <img src="./images/image-hero-desktop.png" alt="" >
       </section>
     </div>
-  </main>
   <script>
     let optionSub = document.querySelectorAll('.option.submenu');
     Array.from(optionSub).forEach(function(option) {
       option.addEventListener('click', function(e) {
         e.stopPropagation();
         let submenu = option.querySelector('.submenu');
+        let icon = option.querySelector('.text img');
+        if(icon.src.indexOf('up') !== -1){
+          icon.src = './images/icon-arrow-down.svg';
+        }else{
+          icon.src = "./images/icon-arrow-up.svg";
+        }
         submenu.classList.toggle('active');
       });
     });

@@ -1,10 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Epilogue:wght@500;700&display=swap');
+
 html,
 body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Epilogue', sans-serif;
   background-color: white;
+  height: 100%;
+  overflow: hidden;
 }
 header {
   display: flex;
@@ -28,8 +32,18 @@ ul li.option {
   color: #686868;
   cursor: default;
 }
-ul li.option:hover {
-  color: #000;
+li.option .text{
+    display: flex;
+    align-items: center;
+}
+li.option .text:hover{
+    color: black;
+}
+li.option span:hover{
+    color: black;
+}
+.text span{
+    margin-right: 10px;
 }
 ul.submenu {
   display: none;
@@ -103,31 +117,37 @@ ul.submenu li {
     color: #000;
 }
 /* MAIN */
-main .container{
-    padding: 0 140px;
+.container{
+    padding: 0 15%;
     padding-top: 60px;
     display: flex;
+    flex-direction: row;
+    height: 100%;
+    overflow-y: hidden;
 }
 .container section{
-    max-height: 600px;
     width: 100%;
-    padding-bottom: 10px;
+    height: 70%;
 }
-.review{
-    width: 100%;
+.info{
+    padding-right: 40px;
+}
+.info  .info-container{
     display: flex;
     flex-direction: column;
+    height: 100%;
 }
-.review .hero-title{
+.info .hero-title{
     font-size: 3em;
     font-weight: bold;
     padding-top: 40px;
     margin-bottom: 15px;
+    font-family: "Epilogue", sans-serif;
 }
 .hero-title h1{
     margin: 0;
 }
-.review .description{
+.info .description{
     box-sizing: border-box;
     font-size: 1em;
     line-height: 1.5em;
@@ -135,18 +155,19 @@ main .container{
     width: 400px;
     text-align: justify;
     color: #686868;
-    font-weight: 600;
+    font-family: "Epilogue", sans-serif;
 }
 /* BUTTON MORE */
 .btn.more{
     background-color: #000;
     width: 100px;
-    padding-left: 20px;
-    padding-right: 20px;
+    padding-left: 25px;
+    padding-right: 25px;
     padding-top: 15px;
     padding-bottom: 15px;
     border-radius: 14px;
     text-align: center;
+    font-size: 18px;
 }   
 .btn.more a{
     color: #fff;
@@ -155,8 +176,8 @@ main .container{
 /* PARTNER LIST */
 .partner-list{
     display: flex;
-    flex-wrap: wrap;
     justify-content: flex-start;
+    flex-wrap: wrap;
     padding-top: 80px;
 }
 .partner-list .partner-item{
@@ -166,11 +187,28 @@ main .container{
 .partner-list .partner-item:first-child{
     margin-left: 0;
 }
+/* FLEX GROW ELEMENT */
+.info .hero-title{
+    flex: 1 1 140px;
+    font-size: 70px;
+}
+.info .description{
+    flex: 1 1 140px;
+    font-size: 25px;
+    font-weight: lighter;
+    width: 500px;
+}
+.partner-list{
+    flex: 2 2 auto;
+    align-items: flex-end;
+}
 /* IMAGE */
-/* .hero-image{
-    background-image: url('../images/image-hero-desktop.png');
-    width: 100%;
-    height: 700px;
-    background-size: cover;
-    background-repeat: no-repeat;
-} */
+.hero-image{
+    flex: 1 1 220px;
+}
+.hero-image img{
+    /* width: 100%; */
+    height: 100%;
+    object-fit: contain;
+    object-position: center top;
+}
