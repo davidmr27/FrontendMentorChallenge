@@ -1,7 +1,77 @@
-@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@400;500;600;700&family=Lexend:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@400;500;600;700&family=Lexend+Deca:wght@100;200;300;400;500;600;700&family=Lexend:wght@100;200;300;400;500;600;700;800;900&display=swap');
+:root {
+  --font-lexend: "Lexend";
+  --font-big: "Big Shoulders Display";
+}
+body,
+html {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: "Lexend", sans-serif;
+}
+.cards {
+  display: flex;
+  height: 400px;
+  background-color: gray;
+  justify-content: center;
+}
+.cards .card {
+  box-sizing: border-box;
+  width: 300px;
+  height: 100%;
+  color: #fff;
+  padding: 30px 35px;
+  border-radius: 10px 0 0 10px;
+}
+.card:nth-child(1) {
+  background-color: #e28625;
+}
+.card:nth-child(2) {
+  background-color: #006971;
+}
+.card:nth-child(3) {
+  background-color: #004140;
+}
+.card .card-title {
+  padding-top: 20px;
+  box-sizing: border-box;
+  font-family: "Big Shoulders Display";
+  font-weight: bold;
+  font-size: 40px;
+  text-transform: uppercase;
+}
+.card .card-content {
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 1.5;
+  font-family: "Lexend Deca";
+}
 
-body, html{
-    box-sizing: border-box;
-    padding:0;
-    margin:0;
+.card .card-content a{
+    text-decoration: none;
+    background-color:#fff;
+    padding: 10px 25px;
+    border-radius: 20px;
+    font-family: 'Lexend Deca';
+    font-size: 15px;
+    text-transform:capitalize;
+}
+.card .card-content p{
+    margin-bottom: 40px;
+}
+.card-content .button.sedans{
+    color: #e28625;
+}
+.card-content .button.suvs{
+    color: #006971;
+}
+.card-content .button.luxury{
+    color: #004140;
+}
+
+.card-content .button:hover{
+    background-color:transparent;
+    border: 2px solid #fff;
+    color: #fff;
 }
