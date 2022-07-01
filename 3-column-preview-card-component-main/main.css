@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@400;500;600;700&family=Lexend+Deca:wght@100;200;300;400;500;600;700&family=Lexend:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@400;500;600;700&family=Lexend+Deca:wght@100;200;300;400;500;600;700&family=Lexend:wght@100;200;300;400;500;600;700;800;900&display=swap");
 :root {
   --font-lexend: "Lexend";
   --font-big: "Big Shoulders Display";
@@ -10,10 +10,15 @@ html {
   margin: 0;
   font-family: "Lexend", sans-serif;
 }
+main {
+  width: 100%;
+  padding-top: 180px;
+  display: flex;
+  justify-content: center;
+}
 .cards {
   display: flex;
-  height: 400px;
-  background-color: gray;
+  height: 450px;
   justify-content: center;
 }
 .cards .card {
@@ -23,15 +28,21 @@ html {
   color: #fff;
   padding: 30px 35px;
   border-radius: 10px 0 0 10px;
+  display: flex;
+  flex-direction: column;
 }
 .card:nth-child(1) {
   background-color: #e28625;
 }
 .card:nth-child(2) {
   background-color: #006971;
+  position: relative;
+  left: -14px;
 }
 .card:nth-child(3) {
   background-color: #004140;
+  position: relative;
+  left: -22px;
 }
 .card .card-title {
   padding-top: 20px;
@@ -46,32 +57,62 @@ html {
   font-size: 16px;
   line-height: 1.5;
   font-family: "Lexend Deca";
+  display: flex;
+  flex-direction: column;
+  flex-grow: 2;
 }
 
-.card .card-content a{
-    text-decoration: none;
-    background-color:#fff;
-    padding: 10px 25px;
-    border-radius: 20px;
-    font-family: 'Lexend Deca';
-    font-size: 15px;
-    text-transform:capitalize;
+.card .card-content a {
+  text-decoration: none;
+  background-color: #fff;
+  padding: 10px 25px;
+  border-radius: 20px;
+  font-family: "Lexend Deca";
+  font-size: 15px;
+  text-transform: capitalize;
+  width: 150px;
+  text-align: center;
+  box-sizing: border-box;
 }
-.card .card-content p{
-    margin-bottom: 40px;
+.card .card-content p {
+  margin-bottom: 40px;
+  flex-grow:2;
 }
-.card-content .button.sedans{
-    color: #e28625;
+.card-content .button.sedans {
+  color: #e28625;
 }
-.card-content .button.suvs{
-    color: #006971;
+.card-content .button.suvs {
+  color: #006971;
 }
-.card-content .button.luxury{
-    color: #004140;
+.card-content .button.luxury {
+  color: #004140;
 }
 
-.card-content .button:hover{
-    background-color:transparent;
-    border: 2px solid #fff;
-    color: #fff;
+.card-content .button:hover {
+  background-color: transparent;
+  outline: 3px solid #fff;
+  color: #fff;
+  transition: ease-out .1s;
+}
+@media screen and (max-width: 800px) {
+    main{
+        flex-direction: column;
+    }
+  .cards {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 900px;
+  }
+  .cards .card {
+    border-radius: 10px 10px 0 0;
+  }
+  .card:nth-child(2) {
+    left: 0;
+    top: -12px;
+  }
+  .card:nth-child(3) {
+    left: 0;
+    top: -20px;
+  }
 }
