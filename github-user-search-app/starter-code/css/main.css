@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@400;500;600;700&family=Lexend+Deca:wght@100;200;300;400;500;600;700&family=Space+Mono:wght@400;700&display=swap');
+
+:root {
+  --light-blue: #0079ff;
+  --light-gray: #697c9a;
+  --light-bluedark: #4b649b;
+  --light-bg: #f6f8ff;
+  --light-gummetal: #2b3442;
+  --light-white: #fefefe;
+  --dark-blue: #0079ff;
+  --dark-white: #ffffff;
+  --dark-bg: #141d2f;
+  --dark-bg-second: #1e2a47;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body, html{
+    font-family:'Space Mono', sans-serif;
+    font-family: 16px;
+    padding:0;
+    margin:0;
+    background-color: var(--light-bg)
+}
+main{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    height: 100vh;
+}
+.container{
+    margin: 0 6rem;
+}
+.design{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    font-size: 1.4rem;
+    font-weight: bold;
+    box-sizing: border-box;
+}
+.design .design__mode{
+    text-transform: uppercase;
+    color: var(--light-gray);
+    font-size: .8rem;
+    cursor: default;
+    display: flex;
+    justify-content: space-between;
+}
+.design__mode .mode__text{
+   display: inline-block;
+   margin-right: .6rem;
+}
