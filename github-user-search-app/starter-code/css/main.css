@@ -76,6 +76,7 @@ main {
   font-family: "Space Mono", sans-serif;
   color: var(--dark-bg);
   outline: none;
+  background-color: transparent;
 }
 .search input[type="text"]::placeholder {
   color: #4b6a9b;
@@ -88,7 +89,8 @@ main {
   margin-right: 1rem;
   color: #f74646;
   font-weight: 700;
-  display: none;
+  opacity: 1;
+  /* display: none; */
 }
 .search .search__button {
   background-color: var(--light-blue);
@@ -128,6 +130,7 @@ main {
   object-fit: cover;
   object-position: center;
   width: 100%;
+  border-radius: 50%;
 }
 .profile .info {
   display: flex;
@@ -191,6 +194,43 @@ main {
   margin-bottom: 1rem;
   color: #4B6A9B;
 }
-.business img{
+.business .icon{
   margin-right: 1rem;
+  padding-top: .4rem;
 }
+
+/* DARKMODE */
+body.darkmode{
+  background-color: var(--dark-bg);
+}
+.container.darkmode .design{
+  color:var(--dark-white);
+}
+.design.darkmode .design__mode{
+  color:var(--dark-white);
+}
+.design.darkmode .design__mode img{
+  filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(25deg) brightness(104%) contrast(101%);
+}
+.search.darkmode{
+  background-color: var(--dark-bg-second);
+}
+.search.darkmode input[type="text"]::placeholder, .search.darkmode input[type="text"]{
+  color: var(--dark-white);
+}
+.profile.darkmode{
+  background-color: var(--dark-bg-second);
+}
+.profile.darkmode span,
+.profile.darkmode h1,
+.profile.darkmode p,
+.profile.darkmode a{
+  color: var(--dark-white);
+}
+.profile.darkmode .details__column{
+  background-color: var(--dark-bg);
+}
+.icon svg{
+  fill: white;
+}
+/* TODO: Arreglar colores de los iconos */
