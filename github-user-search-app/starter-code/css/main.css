@@ -24,6 +24,7 @@ html {
   padding: 0;
   margin: 0;
   background-color: var(--light-bg);
+  height: 100vh;
 }
 main {
   display: flex;
@@ -31,6 +32,7 @@ main {
   justify-content: center;
   align-content: center;
   height: 100vh;
+  width: 100%;
 }
 .container {
   margin: 0 6rem;
@@ -52,10 +54,14 @@ main {
   cursor: default;
   display: flex;
   justify-content: space-between;
+  transition: all 0.5s;
 }
 .design__mode .mode__text {
   display: inline-block;
   margin-right: 0.6rem;
+}
+.design .design__mode:hover{
+  filter: invert(0%) sepia(5%) saturate(18%) hue-rotate(343deg) brightness(60%) contrast(200%);
 }
 .search {
   width: 100%;
@@ -200,7 +206,7 @@ main {
 }
 
 /* DARKMODE */
-body.darkmode{
+body.darkmode,html.darkmode{
   background-color: var(--dark-bg);
 }
 .container.darkmode .design{
@@ -208,9 +214,6 @@ body.darkmode{
 }
 .design.darkmode .design__mode{
   color:var(--dark-white);
-}
-.design.darkmode .design__mode img{
-  filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(25deg) brightness(104%) contrast(101%);
 }
 .search.darkmode{
   background-color: var(--dark-bg-second);
@@ -230,7 +233,10 @@ body.darkmode{
 .profile.darkmode .details__column{
   background-color: var(--dark-bg);
 }
-.icon svg{
-  fill: white;
+main.darkmode .icon img{
+  filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(288deg) brightness(202%) contrast(250%);
 }
 /* TODO: Arreglar colores de los iconos */
+main.darkmode .design__mode:hover{
+  filter: invert(75%) sepia(12%) saturate(7464%) hue-rotate(191deg) brightness(195%) contrast(250%);
+}
