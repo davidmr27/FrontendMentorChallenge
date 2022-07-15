@@ -32,31 +32,32 @@
         <div class="search " id="search">
           <img class="search__icon" src="./assets/icon-search.svg" />
           <input
+            id="search__input"
             class="search__input"
             type="text"
             placeholder="Search GitHub username..."
           />
-          <div class="search__notfound">
+          <div class="search__notfound" id="search__notfound">
             <span>No results</span>
           </div>
-          <button class="search__button" type="button">Search</button>
+          <button class="search__button" type="button" id="search__button">Search</button>
         </div>
         <div class="profile" id="profile">
           <div class="photo">
             <div class="photo__container photo__circle">
-              <img src="./assets/GitHub-Mark.png" alt="" />
+              <img src="./assets/GitHub-Mark.png" id="profile__img"/>
             </div>
           </div>
           <div class="info">
             <div class="header">
               <div class="header__user">
-                <h1>The Octocat</h1>
-                <h3 class="username">@octocat</h3>
+                <h1 id="name">The Octocat</h1>
+                <h3 class="username" id="username">@octocat</h3>
               </div>
-              <span class="header__joined">Joined 25 Jan 2011</span>
+              <span class="header__joined" id="joined">Joined 25 Jan 2011</span>
             </div>
             <div class="details">
-              <p class="details__bio">
+              <p class="details__bio" id="biography">
                 Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fuga
                 eaque earum laborum expedita eveniet. Omnis, voluptas! Quod
                 earum quae harum quis nam sequi, sunt magnam ipsam excepturi
@@ -65,15 +66,15 @@
               <div class="details__column">
                 <div class="column">
                   <span>Repos</span>
-                  <span>8</span>
+                  <span id="repository">8</span>
                 </div>
                 <div class="column">
                   <span>Followers</span>
-                  <span>3938</span>
+                  <span id="followers">3938</span>
                 </div>
                 <div class="column">
                   <span>Following</span>
-                  <span>9</span>
+                  <span id="following">9</span>
                 </div>
               </div>
               <div class="details__business">
@@ -81,27 +82,27 @@
                   <div class="icon">
                     <img src="./assets/icon-location.svg" alt="">
                   </div>
-                  <span>San francisco</span>
+                  <span id="location">San francisco</span>
                 </div>
                 <div class="business twitter">
                   <div class="icon">
                    <img src="./assets/icon-twitter.svg" alt="">
                   </div>
-                  <span>Not Available</span>
+                  <span id="twitter">Not Available</span>
                 </div>
                 <div class="business blog">
                   <div class="icon">
                     <img src="./assets/icon-website.svg" alt="">
                   </div>
                   <span
-                    ><a href="https://github.blog">https://github.blog</a></span
+                    ><a href="https://github.blog" id="website">https://github.blog</a></span
                   >
                 </div>
                 <div class="business company">
                   <div class="icon">
                     <img src="./assets/icon-company.svg">
                   </div>
-                  <span>@github</span>
+                  <span id="company">@github</span>
                 </div>
               </div>
             </div>
