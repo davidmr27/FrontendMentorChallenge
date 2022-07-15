@@ -60,8 +60,9 @@ main {
   display: inline-block;
   margin-right: 0.6rem;
 }
-.design .design__mode:hover{
-  filter: invert(0%) sepia(5%) saturate(18%) hue-rotate(343deg) brightness(60%) contrast(200%);
+.design .design__mode:hover {
+  filter: invert(0%) sepia(5%) saturate(18%) hue-rotate(343deg) brightness(60%)
+    contrast(200%);
 }
 .search {
   width: 100%;
@@ -96,7 +97,7 @@ main {
   color: #f74646;
   font-weight: 700;
   opacity: 1;
-  /* display: none; */
+  display: none;
 }
 .search .search__button {
   background-color: var(--light-blue);
@@ -116,23 +117,23 @@ main {
   transition: ease-in-out 0.2s;
 }
 /* INFO STYLE */
-.profile{
+.profile {
   display: flex;
   background-color: var(--light-white);
   filter: drop-shadow(0px 4px 10px rgba(70, 96, 187, 0.26));
-  border-radius:.9rem;
+  border-radius: 0.9rem;
   padding: 1rem 1.2rem;
 }
-.profile .photo{
+.profile .photo {
   padding: 1rem 1.2rem;
 }
-.profile .photo .photo__container{
+.profile .photo .photo__container {
   border-radius: 50%;
   width: 120px;
   height: 120px;
   text-align: center;
 }
-.photo__container img{
+.photo__container img {
   object-fit: cover;
   object-position: center;
   width: 100%;
@@ -149,94 +150,103 @@ main {
   display: flex;
   justify-content: space-between;
 }
-.header .header__user{
+.header .header__user {
   text-transform: capitalize;
 }
-.header__user h1{
+.header__user h1 {
   margin: 0;
 }
-.header__user .username{
+.header__user .username {
   color: var(--light-blue);
   margin: 0;
   font-size: 1rem;
   font-weight: 200;
 }
-.header .header__joined{
+.header .header__joined {
   color: var(--light-gray);
 }
-.details .details__bio{
-  color: #4B6A9B;
+.details .details__bio {
+  color: #4b6a9b;
 }
-.details .details__column{
+.details .details__column {
   display: flex;
   justify-content: space-between;
   background-color: var(--light-bg);
-  border-radius: .5rem;
-  padding: .5rem .8rem;
+  border-radius: 0.5rem;
+  padding: 0.5rem 0.8rem;
   margin-bottom: 2rem;
 }
-.details__column .column{
-  padding: .1rem 1rem .5rem 1rem;
+.details__column .column {
+  padding: 0.1rem 1rem 0.5rem 1rem;
 }
-.column span:first-child{
+.column span:first-child {
   display: block;
-  color: #4B6A9B;
+  color: #4b6a9b;
 }
-.column span:last-child{
+.column span:last-child {
   font-size: 2rem;
   font-weight: 700;
-  color: var(--light-gummetal)
+  color: var(--light-gummetal);
 }
-.details__business{
+.details__business {
   display: flex;
   flex-flow: row wrap;
   align-items: center;
 }
-.details__business .business{
+.details__business .business {
   flex: 1 1 50%;
   text-align: left;
   display: flex;
   align-items: center;
   margin-bottom: 1rem;
-  color: #4B6A9B;
+  color: #4b6a9b;
 }
-.business .icon{
+.business .icon {
   margin-right: 1rem;
-  padding-top: .4rem;
+  padding-top: 0.4rem;
 }
 
 /* DARKMODE */
-body.darkmode,html.darkmode{
+body.darkmode,
+html.darkmode {
   background-color: var(--dark-bg);
 }
-.container.darkmode .design{
-  color:var(--dark-white);
-}
-.design.darkmode .design__mode{
-  color:var(--dark-white);
-}
-.search.darkmode{
-  background-color: var(--dark-bg-second);
-}
-.search.darkmode input[type="text"]::placeholder, .search.darkmode input[type="text"]{
+.container.darkmode .design {
   color: var(--dark-white);
 }
-.profile.darkmode{
+.design.darkmode .design__mode {
+  color: var(--dark-white);
+}
+
+.design.darkmode .design__mode .icon img {
+  filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(288deg)
+    brightness(202%) contrast(250%);
+}
+.search.darkmode {
+  background-color: var(--dark-bg-second);
+}
+.search.darkmode input[type="text"]::placeholder,
+.search.darkmode input[type="text"] {
+  color: var(--dark-white);
+}
+.profile.darkmode {
   background-color: var(--dark-bg-second);
 }
 .profile.darkmode span,
 .profile.darkmode h1,
 .profile.darkmode p,
-.profile.darkmode a{
+.profile.darkmode a {
   color: var(--dark-white);
 }
-.profile.darkmode .details__column{
+.profile.darkmode .details__column {
   background-color: var(--dark-bg);
 }
-main.darkmode .icon img{
-  filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(288deg) brightness(202%) contrast(250%);
+main.darkmode .icon img {
+  filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(288deg)
+    brightness(202%) contrast(250%);
 }
 /* TODO: Arreglar colores de los iconos */
-main.darkmode .design__mode:hover{
-  filter: invert(75%) sepia(12%) saturate(7464%) hue-rotate(191deg) brightness(195%) contrast(250%);
+main.darkmode .design__mode:hover {
+  filter: invert(75%) sepia(12%) saturate(7464%) hue-rotate(191deg)
+    brightness(195%) contrast(250%);
 }
