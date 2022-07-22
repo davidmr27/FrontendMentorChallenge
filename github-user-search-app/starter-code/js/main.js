@@ -15,6 +15,32 @@ function switchDarkMode() {
     }
 }
 
+function removeAllDarkMode() {
+    let body = document.getElementById('body');
+    let html = document.getElementById('html');
+    let main = document.getElementById('main');
+    let container = document.getElementById('container');
+    let search = document.getElementById('search');
+    let design = document.getElementById('design');
+    let profile = document.getElementById('profile');
+    let sections = [body, main, container, search, design, profile, html];
+    for (let elem of sections) {
+        elem.classList.remove("darkmode");
+    }
+}
+
+function switchModeLightText() {
+    let mode = document.getElementById('mode');
+    mode.lastElementChild.firstElementChild.src = "./assets/icon-sun.svg";
+    mode.firstElementChild.innerText = 'light';
+    mode.classList.add("dark");
+}
+function switchModeDarkText() {
+    let mode = document.getElementById('mode');
+    mode.lastElementChild.firstElementChild.src = "./assets/icon-moon.svg";
+    mode.firstElementChild.innerText = 'dark';
+    mode.classList.remove("dark");
+}
 // switchDarkMode();
 
 let mode = document.getElementById('mode');
@@ -39,7 +65,6 @@ function fetchUserGithub(username) {
     console.log(username);
     fetch(`https://api.github.com/users/${username}`, {
         method: 'GET',
-       
     })
         .then(response => response.json())
         .then(userinfo => {
@@ -114,3 +139,19 @@ button.addEventListener('click', (e) => {
     let searchInput = document.getElementById('search__input');
     fetchUserGithub(searchInput.value);
 })
+
+function changeModeComputer(modeMatch){
+if (modeMatch === true) {
+    switchDarkMode();
+    switchModeLightText();
+}else{
+    switchModeDarkText();
+    // switchDarkMode();
+    removeAllDarkMode();
+}
+}
+
+//DARKMODE
+const darkMode = window.matchMedia('(prefers-color-scheme: dark)');
+changeModeComputer(darkMode.matches);
+darkMode.addEventListener('change', (e)=>{changeModeComputer(darkMode.matches)})
